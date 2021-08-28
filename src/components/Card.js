@@ -1,4 +1,24 @@
+import { useState } from "react";
+
 const Card = (props) => {
+
+    const [flipped, setFlipped] = useState(props.flipped);
+    const [compareCards, setCompareCards] = useState([]);
+    const compare = []
+
+    const flipCard = () => {
+        setFlipped(!flipped)
+        const cardInfo = {"name": props.name, "flipped": flipped}
+        setCompareCards(prevArray => [...prevArray, cardInfo])
+        compare.push(cardInfo)
+    }
+
+    const checkCard = () => {
+        console.log(compareCards)
+        if (compareCards.length === 2) {
+            console.log(compareCards)
+        }
+    }
     
     const back = () => {
         return (
@@ -14,8 +34,8 @@ const Card = (props) => {
     }
 
     return (
-        <div className="card" onClick={cardClicked}>
-            {props.flipped
+        <div className="card" onClick={() => { flipCard(); checkCard(); }}>
+            {flipped
                 ? front()
                 : back()
             }
