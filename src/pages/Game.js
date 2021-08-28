@@ -1,5 +1,5 @@
 import Card from '../components/Card';
-import { AnimalData } from '../components/AnimalData';
+import AnimalData from '../components/AnimalData';
 
 const randomize = () => {
     const animalPic = AnimalData.map((animal) => ({
@@ -33,7 +33,8 @@ const Game = () => {
                         key={index}
                         answer={animal.answer}
                         name={animal.name}
-                        img={animal.url}
+                        img={animal.image}
+                        flipped={animal.flipped}
                     />
                 ))}
             </div>

@@ -1,26 +1,34 @@
-export const AnimalData = [
+const AnimalData = [
     {
-        name: "Dog",
-        url: "../assets/panda.png"
+        name: "Panda",
+        image: "panda.png",
+        flipped: false
     },
     {
         name: "Cow",
-        url: "../assets/cow.png"
+        image: "cow.png",
+        flipped: false
     },
     {
         name: "Pig",
-        url: "../assets/pig.png"
+        image: "pig.png",
+        flipped: false
     },
     {
         name: "Lion",
-        url: "../assets/lion.png"
+        image: "lion.png",
+        flipped: false
     },
     {
         name: "Fish",
-        url: "../assets/fish.png"
+        image: "fish.png",
+        flipped: false
     },
     {
         name: "Chicken",
-        url: "../assets/chicken.png"
+        image: "chicken.png",
+        flipped: false
     }
 ];
+
+export default AnimalData
