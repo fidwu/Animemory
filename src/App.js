@@ -3,18 +3,20 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MemoryGame from './pages/Game';
-import HomePage from './pages/Home';
+import Home from './pages/Home';
+import HeroSection from './components/HeroSection';
 
 function App() {
   return (
     <>
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/game" component={MemoryGame} exact />
-        <Route path="/" component={HomePage} exact />
-      </Switch>
-    </Router>
+      <Router>
+        <Navbar />
+        <HeroSection />
+        <Switch>
+          <Route path='/game' component={MemoryGame} exact />
+          <Route path='/' component={Home} exact />
+        </Switch>
+      </Router>
     </>
   );
 }
