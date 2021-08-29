@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
+import { Button } from './Button';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  // const [button, setButton] = useState(true);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobibleMenu = () => setClick(false);
 
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
-  // window.addEventListener('resize', showButton);
+  window.addEventListener('resize', showButton);
 
   return (
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo'>
-            ANIMEMORY
+            ANIMEMORY <i className='fas fa-paw'></i>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -39,12 +41,13 @@ function Navbar() {
                 About
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link to='game' className='nav-links' onClick={closeMobibleMenu}>
                 Game
               </Link>
-            </li>
+            </li> */}
           </ul>
+          {button && <Button buttonStyle='btn--outline'>PLAY GAME</Button>}
         </div>
       </nav>
     </>
