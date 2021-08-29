@@ -1,24 +1,4 @@
-import { useState } from "react";
-
 const Card = (props) => {
-
-    const [flipped, setFlipped] = useState(props.flipped);
-    const [compareCards, setCompareCards] = useState([]);
-    const compare = []
-
-    const flipCard = () => {
-        setFlipped(!flipped)
-        const cardInfo = {"name": props.name, "flipped": flipped}
-        setCompareCards(prevArray => [...prevArray, cardInfo])
-        compare.push(cardInfo)
-    }
-
-    const checkCard = () => {
-        console.log(compareCards)
-        if (compareCards.length === 2) {
-            console.log(compareCards)
-        }
-    }
     
     const back = () => {
         return (
@@ -28,14 +8,18 @@ const Card = (props) => {
 
     const front = () => {
         const image = require(`../assets/${props.img}`).default
-        return props.answer ?
-            <h3>{props.answer && props.name}</h3>
-            : <img src={image} width="70" height="70" alt={`${props.name}`} />
+        return (
+            <div className="card-front">
+                { props.answer ?
+                <h3>{props.answer && props.name}</h3>
+                : <img src={image} width="70" height="70" alt={`${props.name}`} /> }
+            </div>
+        )
     }
 
     return (
-        <div className="card" onClick={() => { flipCard(); checkCard(); }}>
-            {flipped
+        <div className="card" onClick={() => { props.onClick(); }}>
+            {props.flip
                 ? front()
                 : back()
             }
