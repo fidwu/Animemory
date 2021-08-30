@@ -41,8 +41,8 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='about' className='nav-links' onClick={closeMobibleMenu}>
-                About
+              <Link to='instructions' className='nav-links' onClick={closeMobibleMenu}>
+                How To Play
               </Link>
             </li>
             {/* <li className='nav-item'>
