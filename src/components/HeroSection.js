@@ -21,13 +21,13 @@ function HeroSection() {
         >
           PLAY GAME
         </Button>
-        <Button
+        {/* <Button
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
         >
-          HOW TO PLAY <i className='far fa-play-circle'/>
-        </Button>
+          HOW TO PLAY <i className='far fa-play-circle' />
+        </Button> */}
       </div>
     </div>
   );
