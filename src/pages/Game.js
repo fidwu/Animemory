@@ -103,32 +103,35 @@ const Game = () => {
 
     return (
         <>
-            <div className="controls">
-                <div className="lives-left-box">
-                    {displayLives().map(lives => lives)}
+            <div className="game">
+                <div className="controls">
+                    <div className="lives-left-box">
+                        {displayLives().map(lives => lives)}
+                    </div>
+                    {/* <div className="timer">01:00</div> */}
+                    <button className="game-btn restart" onClick={restartGame}>Restart</button>
                 </div>
-                {/* <div className="timer">01:00</div> */}
-                <button className="game-btn restart" onClick={restartGame}>Restart</button>
+                <div className="grid">
+                    {cards.map((animal, index) => (
+                        <Card
+                            key={index}
+                            answer={animal.answer}
+                            name={animal.name}
+                            img={animal.image}
+                            flip={animal.flipped}
+                            onClick={() => compareCard(animal.name, animal.answer)}
+                        />
+                    ))}
+                </div>
+                {result &&
+                    <ResultModal result={result}>
+                        <button className="game-btn playagain" onClick={restartGame}>
+                            {result === "win" ? "Play Again!" : "Try Again"}
+                        </button>
+                    </ResultModal>
+                }
             </div>
-            <div className="grid">
-                {cards.map((animal, index) => (
-                    <Card
-                        key={index}
-                        answer={animal.answer}
-                        name={animal.name}
-                        img={animal.image}
-                        flip={animal.flipped}
-                        onClick={() => compareCard(animal.name, animal.answer)}
-                    />
-                ))}
-            </div>
-            {result &&
-                <ResultModal result={result}>
-                    <button className="game-btn playagain" onClick={restartGame}>
-                        {result === "win" ? "Play Again!" : "Try Again"}
-                    </button>
-                </ResultModal>
-            }
+            <div className="attribution">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </>
     )
 }
