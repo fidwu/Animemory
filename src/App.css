@@ -105,3 +105,9 @@
 .result-image {
   margin-bottom: 15px;
 }
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 80%;
+  }
+}

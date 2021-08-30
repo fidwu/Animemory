@@ -1,3 +1,5 @@
+import ReactCardFlip from "react-card-flip"
+
 const Card = (props) => {
     
     const back = () => {
@@ -18,12 +20,14 @@ const Card = (props) => {
     }
 
     return (
-        <div className="card" onClick={() => { props.onClick(); }}>
-            {props.flip
-                ? front()
-                : back()
-            }
-        </div>
+        <ReactCardFlip isFlipped={!props.flip} flipDirection="horizontal">
+            <div className="card" onClick={() => { props.onClick(); }}>
+                { front() }
+            </div>
+            <div className="card" onClick={() => { props.onClick(); }}>
+                { back() }
+            </div>
+        </ReactCardFlip>
     )
 }
 

@@ -29,7 +29,6 @@ const Game = () => {
             animalsList[i] = animalsList[j];
             animalsList[j] = temp;
         }
-        console.log(animalsList)
         setCards(animalsList);
     }
 
@@ -69,12 +68,12 @@ const Game = () => {
         
         // end game if no strikes left
         if (!livesLeft) {
-            setResult("lose")
+            setTimeout(() => { setResult("lose") }, 400)
         }
 
         // win game if lives left and all cards are matched
         if (livesLeft && matched.length === AnimalData.length) {
-            setResult("win")
+            setTimeout(() => { setResult("win") }, 400)
         }
     }, [compareCards, livesLeft, matched])
 
@@ -92,11 +91,14 @@ const Game = () => {
     }
 
     const restartGame = () => {
-        randomize()
+        setCards(cards.map((animal) => ({
+            ...animal, flipped: false
+        })))
         setCompareCards([])
         setMatched([])
         setLivesLeft(5)
         setResult("")
+        setTimeout(() => { randomize() }, 200)
     }
 
     return (
@@ -122,7 +124,9 @@ const Game = () => {
             </div>
             {result &&
                 <ResultModal result={result}>
-                    <button className="game-btn playagain" onClick={restartGame}>Play Again!</button>
+                    <button className="game-btn playagain" onClick={restartGame}>
+                        {result === "win" ? "Play Again!" : "Try Again"}
+                    </button>
                 </ResultModal>
             }
         </>
