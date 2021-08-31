@@ -41,15 +41,15 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='instructions' className='nav-links' onClick={closeMobibleMenu}>
+              <Link to='/instructions' className='nav-links' onClick={closeMobibleMenu}>
                 How To Play
               </Link>
             </li>
-            {/* <li className='nav-item'>
-              <Link to='game' className='nav-links' onClick={closeMobibleMenu}>
-                Game
+            <li className='nav-item'>
+              <Link to='team' className='nav-links' onClick={closeMobibleMenu}>
+                The Team
               </Link>
-            </li> */}
+            </li> 
           </ul>
           {button && <Button buttonStyle='btn--outline'>PLAY GAME</Button>}
         </div>

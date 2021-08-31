@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.about-section {
+  height: 100vh;
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+  background-color: #EBFBFF;
+  color: #000000;
+}
+
+.about-section img {
+width: 40%;
+margin: 0 0 10px 0;
+padding-right: 0;
+border-radius: 50%;
+}
+
+i {
+  font-size: 50px
+}
+
