@@ -6,6 +6,7 @@ const Team = () => {
   return (
     <div className='about-section'>
       <h1>Meet the Team</h1>
+      <img src='images/svg2.png' alt='working'></img>
       <p>We are the creators behind the game Animemory.</p>
 
       <div className='row'>
