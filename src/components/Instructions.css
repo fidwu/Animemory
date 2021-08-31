@@ -1,10 +1,7 @@
 .instructions-wrapper {
   margin: auto;
   background: #EBFBFF;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
   align-items: center;
   box-shadow: insert 0 0 0 100px rgba(0, 0, 0, 0.2);
   object-fit: contain;
@@ -52,6 +49,7 @@ line-height: 2.0;
   max-width: 555px;
   height: 100%;
   align-items: center;
+  margin: auto;
 }
 
 .img-wrap img {
@@ -60,4 +58,10 @@ height: auto;
 margin: 0 0 10px 0;
 padding-right: 0;
 border-radius: 50%;
+}
+
+@media screen and (max-width: 960px) {
+  .row {
+    flex-direction: column;
+  }
 }
