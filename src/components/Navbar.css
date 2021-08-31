@@ -16,7 +16,6 @@
   align-items: center;
   height: 80px;
   max-width: 1500px;
-  
 }
 
 .navbar-logo {
@@ -28,6 +27,10 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+}
+
+.fa-paw {
+  padding-left: 5px;
 }
 
 .fa-typo3 {
@@ -44,6 +47,7 @@
   width: 60vw;
   justify-content: end;
   margin-right: 2rem;
+  padding: 0;
 }
 
 .nav-item {
@@ -77,6 +81,10 @@
 }
 
 @media screen and (max-width: 960px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
   .NavbarItems {
     position: relative;
   }
@@ -99,11 +107,12 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    padding-left: 0;
   }
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
+    padding: 0;
     width: 100%;
     display: table;
   }
@@ -112,13 +121,6 @@
     background-color: #fff;
     color: #242424;
     border-radius: 0;
-  }
-
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
   }
 
   .menu-icon {

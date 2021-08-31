@@ -1,7 +1,7 @@
 .instructions-wrapper {
   margin: auto;
   background: #EBFBFF;
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   align-items: center;
   box-shadow: insert 0 0 0 100px rgba(0, 0, 0, 0.2);
   object-fit: contain;
@@ -12,6 +12,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  align-items: center;
 }
 
 .column {

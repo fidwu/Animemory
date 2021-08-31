@@ -4,7 +4,7 @@
 
 .game {
   padding-top: 15px;
-  min-height: calc(100vh - 143px);
+  min-height: calc(100vh - 140px);
   background-color: #EBFBFF;
   padding-bottom: 10px;
 }

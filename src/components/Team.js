@@ -15,12 +15,12 @@ const Team = () => {
             <h2> Fidella Wu</h2>
             <p>
               <a href='https://www.linkedin.com/in/fidella-w-23b90520b/'>
-                <i class='fab fa-linkedin'></i>
+                <i className='fab fa-linkedin'></i>
               </a>
             </p>
             <p>
               <a href='https://github.com/fidwu'>
-                <i class='fab fa-github-square'></i>
+                <i className='fab fa-github-square'></i>
               </a>
             </p>
           </div>
@@ -31,12 +31,12 @@ const Team = () => {
             <h2> Susana Marquna</h2>
             <p>
               <a href='https://www.linkedin.com/in/smarquina/'>
-                <i class='fab fa-linkedin'></i>
+                <i className='fab fa-linkedin'></i>
               </a>
             </p>
             <p>
               <a href='https://github.com/smarquina37'>
-                <i class='fab fa-github-square'></i>
+                <i className='fab fa-github-square'></i>
               </a>
             </p>
           </div>
