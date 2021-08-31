@@ -16,7 +16,6 @@
   align-items: center;
   height: 80px;
   max-width: 1500px;
-  
 }
 
 .navbar-logo {
@@ -59,10 +58,10 @@
   height: 100%;
 }
 
-.nav-links:hover {
-  border-bottom: 4px solid #fff;
+/* .nav-links:hover {
+  border-bottom: 4px solid #EBFBFF;
   transition: all 0.2s ease-out;
-}
+} */
 
 .fa-bars {
   color: rgb(71, 69, 69);
@@ -109,8 +108,8 @@
   }
 
   .nav-links:hover {
-    background-color: #fff;
-    color: #242424;
+    background-color: #EBFBFF;
+    color: #10A9E5;
     border-radius: 0;
   }
 
