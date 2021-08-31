@@ -1,14 +1,15 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import Instructions from '../components/Instructions';
-import Contact from '../components/Contact';
+import Team from '../components/Team';
+
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <Instructions />
-      <Contact />
+      <Team />
     </div>
   );
 };
