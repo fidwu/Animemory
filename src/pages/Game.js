@@ -23,7 +23,7 @@ const Game = () => {
             ...animal, answer: true
         }));
         const animalsList = [...animalPic, ...animalText];
-        for (let i = 0; i < animalsList.length - 1; i++) {
+        for (let i = 0; i < animalsList.length; i++) {
             const j = Math.floor(Math.random() * (i + 1));
             const temp = animalsList[i];
             animalsList[i] = animalsList[j];
